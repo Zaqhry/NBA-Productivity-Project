@@ -1,5 +1,7 @@
 
 
+
+
 --TOP PRODUCTIVE NBA PLAYERS FROM 2012 - 2022
 
 SELECT * 
@@ -24,11 +26,11 @@ WHERE Season BETWEEN 2012 AND 2022
 -----------------------------------------------------------------
 
 --Position Total & AVG PPG (Points Per Game),
-				 --FG% (Field Goal %),\
-				 --MP (Minutes Played),
-				 --GP (Games Played),
-				 --AGE,
-				 --EXPERIENCE For All Positions Combined
+		     --FG% (Field Goal %),\
+		     --MP (Minutes Played),
+		     --GP (Games Played),
+	             --AGE,
+		     --EXPERIENCE For All Positions Combined
 
 SELECT COUNT(pos) PositionTotal,
        ROUND(AVG(pts / g),2) AvgPPG, 
@@ -44,13 +46,13 @@ WHERE Season BETWEEN 2012 AND 2022 AND pos IN ('SG','PF','PG','C','SF')
 
 
 --Position Total & League Avg PPG (Points Per Game),
-				  --RPG (Rebounds Per Game), 
-				  --BPG (Blocks Per Game), 
-				  --APG (Assists Per Game),
-				  --SPG (Steals Per Game),
-				  --FT%PG (Free Throw % Per Game),
-				  --3PMPG (3 Pointers Made Per Game),
-			  	  --FG%PG (Field Goal % Per Game) For All Positions Combined
+			    --RPG (Rebounds Per Game), 
+		            --BPG (Blocks Per Game), 
+		            --APG (Assists Per Game),
+			    --SPG (Steals Per Game),
+			  --FT%PG (Free Throw % Per Game),
+			  --3PMPG (3 Pointers Made Per Game),
+			  --FG%PG (Field Goal % Per Game) For All Positions Combined
 
 SELECT COUNT(pos) PositionTotal, 
        ROUND(AVG(Pts / g),2) PPG,
@@ -70,17 +72,16 @@ WHERE Season BETWEEN 2012 AND 2022 AND Pos IN ('SG','PF','PG','C','SF')
 
 
 --Position Total & AVG PPG (Points Per Game),
-			     --FG% (Field Goal %),\
-			     --MP (Minutes Played),
-			     --GP (Games Played),
-			     --AGE,
-			     --EXPERIENCE For Each Individual Position
+		     --FG% (Field Goal %),\
+	              --MP (Minutes Played),
+		      --GP (Games Played),
+	              --AGE,
+		      --EXPERIENCE For Each Individual Position
 
 SELECT TOP 20 pos Position,
 		  COUNT(pos) PositionTotal,			  
 		  ROUND(AVG(pts / g),2) AvgPPG, 
 		  ROUND(AVG(fg_percent),2) AvgFGP,			  
-		  --ROUND(AVG(fg_percent),2) * 100 AvgFGPercent,
 		  ROUND(AVG(mp / g),2) AvgMP, 
 		  ROUND(AVG(gs / g),2) AvgGP, 
 		  ROUND(AVG(Age),2) AvgAge,
@@ -94,14 +95,14 @@ WHERE Season BETWEEN 2012 AND 2022 AND pos IN ('SG','PF','PG','C','SF')
 
 
 --Position Total & League Avg PPG (Points Per Game),
-				  --RPG (Rebounds Per Game), 
-				  --BPG (Blocks Per Game), 
-				  --APG (Assists Per Game),
-			  	  --SPG (Steals Per Game),
-				  --FT%PG (Free Throw % Per Game),
-				  --3PMPG (3 Pointers Made Per Game),
-				  --FG%PG (Field Goal % Per Game) For Each Inidivual Position
-
+			    --RPG (Rebounds Per Game), 
+			    --BPG (Blocks Per Game), 
+		            --APG (Assists Per Game),
+	                    --SPG (Steals Per Game),
+		          --FT%PG (Free Throw % Per Game),
+		          --3PMPG (3 Pointers Made Per Game),
+		          --FG%PG (Field Goal % Per Game) For Each Inidivual Position
+ 
 SELECT TOP 20 Pos Position,
 	      COUNT(pos) PositionTotal, 
 	      ROUND(AVG(Pts / g),2) PPG,	
@@ -214,3 +215,6 @@ FROM NBA
 WHERE Season BETWEEN 2012 AND 2022
 	GROUP BY Player
 	ORDER BY Total3PM DESC
+	
+	
+	
