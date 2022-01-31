@@ -4,6 +4,9 @@
 
 --TOP PRODUCTIVE NBA PLAYERS FROM 2012 - 2022
 
+-----------------------------------------------------------------
+
+
 SELECT * 
 FROM NBA
 
@@ -22,6 +25,8 @@ FROM NBA
 WHERE Season BETWEEN 2012 AND 2022
 
 --We see that throughout history the Average FG% has increased and is at a constant, in the last 10 years, the Average FG% is around 44%
+
+
 
 -----------------------------------------------------------------
 
@@ -42,6 +47,9 @@ SELECT COUNT(pos) PositionTotal,
 FROM NBA 
 WHERE Season BETWEEN 2012 AND 2022 AND pos IN ('SG','PF','PG','C','SF')
 
+
+
+-----------------------------------------------------------------
 
 
 
@@ -70,6 +78,7 @@ WHERE Season BETWEEN 2012 AND 2022 AND Pos IN ('SG','PF','PG','C','SF')
 
 
 
+-----------------------------------------------------------------
 
 --Position Total & AVG PPG (Points Per Game),
 		     --FG% (Field Goal %),\
@@ -93,6 +102,7 @@ WHERE Season BETWEEN 2012 AND 2022 AND pos IN ('SG','PF','PG','C','SF')
 
 
 
+-----------------------------------------------------------------
 
 --Position Total & League Avg PPG (Points Per Game),
 			    --RPG (Rebounds Per Game), 
@@ -122,6 +132,7 @@ WHERE Season BETWEEN 2012 AND 2022 AND Pos IN ('SG','PF','PG','C','SF')
 
 
 
+-----------------------------------------------------------------
 
 --Top 20 Players with the most points within the last 10 years
 
@@ -134,6 +145,7 @@ WHERE Season BETWEEN 2012 AND 2022
 
 
 
+-----------------------------------------------------------------
 
 --Top 20 Players with the highest field goal percent within the last 10 years
 
@@ -146,6 +158,7 @@ WHERE Season BETWEEN 2012 AND 2022
 
 
 
+-----------------------------------------------------------------
 
 --Top 20 Players with most assists within the last 10 years 
 
@@ -158,6 +171,7 @@ WHERE Season BETWEEN 2012 AND 2022
 
 
 
+-----------------------------------------------------------------
 
 --Top 20 Players with most rebounds within the last 10 years 
 
@@ -170,6 +184,7 @@ ORDER BY TotalRBS DESC
 
 
 
+-----------------------------------------------------------------
 
 --Top 20 Players with most assists within the last 10 years 
 
@@ -182,6 +197,7 @@ WHERE Season BETWEEN 2012 AND 2022
 
 
 
+-----------------------------------------------------------------
 
 --Top 20 Players with most blocks within the last 10 years 
 
@@ -194,6 +210,7 @@ WHERE Season BETWEEN 2012 AND 2022
 
 
 
+-----------------------------------------------------------------
 
 --Top 20 Players with most free throws made within the last 10 years 
 
@@ -205,6 +222,8 @@ WHERE Season BETWEEN 2012 AND 2022
 	ORDER BY TotalFTM DESC
 
 
+
+-----------------------------------------------------------------
 
 
 --Top 20 Players with most assists within the last 10 years 
@@ -218,3 +237,7 @@ WHERE Season BETWEEN 2012 AND 2022
 	
 	
 	
+-----------------------------------------------------------------
+
+
+
