@@ -20,7 +20,7 @@ FROM NBA
 GROUP BY Season
 ORDER BY Season 
 
-SELECT ROUND(AVG(Fg_percent),2) a 
+SELECT ROUND(AVG(Fg_percent),2) avg_fg
 FROM NBA 
 WHERE Season BETWEEN 2012 AND 2022
 
@@ -137,7 +137,7 @@ WHERE Season BETWEEN 2012 AND 2022 AND Pos IN ('SG','PF','PG','C','SF')
 --Top 20 Players with the most points within the last 10 years
 
 SELECT TOP 20 Player,
-		   SUM(Pts) TotalPTS
+	      SUM(Pts) TotalPTS
 FROM NBA
 WHERE Season BETWEEN 2012 AND 2022
 	GROUP BY Player
@@ -163,7 +163,7 @@ WHERE Season BETWEEN 2012 AND 2022
 --Top 20 Players with most assists within the last 10 years 
 
 SELECT TOP 20 Player,
-			  SUM(Ast) TotalASTS
+              SUM(Ast) TotalASTS
 FROM NBA
 WHERE Season BETWEEN 2012 AND 2022
 	GROUP BY Player
